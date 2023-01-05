@@ -1,0 +1,183 @@
+@media (max-width:750px) {
+
+    .section-introduction {
+        margin-bottom: -.2rem;
+    }
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    #resume-focus {
+        border: none;
+    }
+
+    #resume-focus:hover {
+        color: #0096c7;
+        background-color: #fff;
+        transform: scale(1);
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid black;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .container-aoi {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        padding: 2rem;
+    }
+
+    .query {
+        grid-row: 4 !important;
+    }
+
+    .aoi-subheader {
+        font-size: 1.8rem;
+    }
+
+    .areas-of-interest-header {
+        font-size: 2rem;
+    }
+
+    .areas-of-interest-blocks:nth-child(even) {
+        grid-row: 3;
+    }
+
+
+}
+
+@media (max-width:670px) {
+
+    .home-about-header {
+        font-size: 2.6rem;
+    }
+
+    .home-about-paragraph {
+        font-size: 1.2rem;
+    }
+
+    .section-hero {
+        padding: 2.4rem 0 9.4rem 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr;
+        gap: 0rem;
+
+    }
+
+    .hero-img {
+        grid-row: 2;
+        margin: auto;
+
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my-projects-focus {
+        padding: .5rem 1rem;
+        font-size: 1.2rem;
+    }
+
+}
+
+
+@media (max-width:470px) {
+    .section-introduction {
+        margin-top: 1rem;
+    }
+
+    .container-aoi {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+    .home-about-header {
+        font-size: 2.2rem;
+    }
+
+    .areas-of-interest-blocks {
+        grid-column: 1/ span 4;
+    }
+
+    .about-me-btn {
+        padding: 0.3rem 0.75rem;
+    }
+
+    .areas-of-interest-subheader-paragraph {
+        font-size: 1.8rem;
+    }
+
+    .query {
+        grid-row: auto !important;
+    }
+
+    .areas-of-interest-blocks:nth-child(even) {
+        grid-row: auto !important;
+    }
+}
+
+@media (max-width:380px) {
+    .hero-img {
+        margin-top: 2rem;
+    }
+
+    .section-introduction {
+        margin-top: 4rem;
+    }
+
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700">
+    <link rel="stylesheet" href="../css/style-portfolio.css">
+</head>
+
+<body>
+    <div class="nav" id="navbar">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <a href="/" class="logo">
+                    <h3> A. Baumann</h3>
+                </a>
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="/" target="_blank">Home</a>
+            <a href="/" target="_blank">About</a>
+            <a href="/" target="_blank">Portfolio</a>
+            <a href="/" target="_blank" id="resume-focus">Resume</a>
+        </div>
+    </div>
+
+    <section class="about-banner">
+        <div class="about-banner-headline-div">
+            <h1 class="about-banner-headline">About Me</h1>
+        </div>
+        <div class="about-banner-subheader-div">
+            <p class="about-banner-subheader">Home
+                <ion-icon name="arrow-forward-outline" class="about-me-arrow"></ion-icon>
+                About Me
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="portfolio-div">
+                <div class="portfolio-img-div">
+                    <ion-icon name="logo-github" class="portfolio-img"></ion-icon>
+                </div>
+                <div class=" portfolio-text-div">
+                    <h2>
+                        Golf shot prediction pattern
+                    </h2>
+                    <p>
+                        This program simulates golf shots based on the users previous shots. The program uses
+                        K-means, and linear algebra concepts to predict the shots.
+                        The program was as apart of golfsimulation.net, that reached 200 unique monthly
+                        visitors.
+                    </p>
+                    <br>
+                    <p>
+                        Anders Baumann, Jan. 2022
+                    </p>
+
+                </div>
+
+
+
+
+
+            </div>
+            <hr>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container footer-grid footer-grid--3-cols">
+            <div class="logo-col">
+                <h4 class="footer-subheader">You can follow me in the links below:</h4>
+                <ul class="social-links">
+                    <li><a class="footer-link" href="/githubprofile">
+                            <ion-icon name="logo-github" class="social-icon"></ion-icon>
+                        </a></li>
+                    <li>
+                        <a class="footer-link" href="/inprofile">
+                            <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-programs">
+                <h4 class="footer-subheader">Cool programs I've been working on:</h4>
+                <ul>
+                    <li>
+                        <a href="">
+                            <p>Golfsimulation Program</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p> Affine transformation from "scratch" (for fun)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>Question and answer NLP program</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </footer>
+
+
+</body>
+
+</html>

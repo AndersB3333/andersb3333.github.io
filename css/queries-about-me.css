@@ -1,0 +1,154 @@
+@media (max-width: 836px) {
+    html {
+        font-size: 58%;
+    }
+
+    .timeline>ul>li>.content {
+        width: 240px;
+    }
+
+    .timeline ul li:nth-child(even) .content {
+        left: calc(-280px - 10px);
+    }
+
+
+    .timeline>ul>li>p>.content {
+        font-size: 1rem;
+    }
+
+    .timeline ul li .content p {
+        font-weight: 300;
+    }
+
+    .timeline ul li .content h4 {
+        font-weight: 500;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .personal-details-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+        gap: 3rem;
+    }
+
+    .personal-details-headline-div {
+        grid-column: 1;
+    }
+
+    .personal-details-subheadline {
+        margin-bottom: 5rem;
+    }
+
+    .personal-details-paragraph {
+        margin: 5rem 0;
+    }
+
+    .personal-details-img-div {
+        grid-row: 1;
+    }
+
+    .timeline ul li .content {
+        display: block;
+        position: static !important;
+        width: 40rem;
+    }
+
+
+    .timeline>ul>li {
+        margin-left: 10rem;
+    }
+
+    .footer-grid--3-cols {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 1.5rem;
+    }
+}
+
+
+@media (max-width: 510px) {
+    .timeline ul li .content {
+        width: 30rem;
+        margin-left: -5rem;
+    }
+
+    .timeline ul li:before {
+        transform: translateX(-500%);
+    }
+}
+
+
+@media (max-width:750px) {
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    #resume-focus {
+        border: none;
+    }
+
+    #resume-focus:hover {
+        color: #0096c7;
+        background-color: #fff;
+        transform: scale(1);
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid black;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media (max-width:615px) {}

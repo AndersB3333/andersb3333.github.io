@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Program</title>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/style-sim.css">
+    <link rel="stylesheet" href="../css/queriessim.css">
+</head>
+
+<body>
+    <div class="nav" id="navbar">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <a href="/" class="logo">
+                    <h3> A. Baumann</h3>
+                </a>
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="/" target="_blank">Home</a>
+            <a href="/" target="_blank">About</a>
+            <a href="/" target="_blank">Portfolio</a>
+            <a href="/" target="_blank" id="resume-focus">Resume</a>
+        </div>
+    </div>
+
+    <h1 class="phone-compatible">This program is currently not compatible on a phone, or small tablet</h1>
+    <section class="start-section">
+
+        <h1 class="headline" id="headline">Find Your Shot Pattern</h1>
+
+
+        <div class="container">
+            <div class="row" id="chart-card">
+                <div id="chart-area"></div>
+            </div>
+        </div>
+
+        <div class="container sim-section img-overlay-wrap">
+            <div>
+                <h2 class="card-headline">170 Yards Approach Shot</h2>
+                <div class="card-body" id="btnAxis">
+                    <div class="grid-col-3-rows">
+                        <div>
+                            <img src="../imgs/y-axis.png" class="y-axis-img" alt="Y-axis, with interval of 4 yards">
+                        </div>
+                        <div id="buttonDiv" class="button-div">
+                        </div>
+                        <div class="guide">
+                            <h3>Guidelines</h3>
+                            <ul>
+                                <li>Each box is 5 yards wide with a height of 4 yards whereas the center box
+                                    represents your target</li>
+                                <li>Click on a box to increase the frequency and to decrease a shot, right click that
+                                    specific box. At least 10 shots needs to be entered to give a valid output.</li>
+                                <li>
+                                    When finished entering the data, press the submit button located further below.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="x-axis-div">
+                            <img src="../imgs/x-axis2.png" class="x-axis-img" alt="X-axis, with interval of 5 yards">
+                        </div>
+
+                        <div class="img-circle">
+                            <img src="../imgs/black-circle.png"
+                                alt="A black circle indicating where you're hitting from">
+                            <p class="img-circle-text">You're hitting from here</p>
+                        </div>
+                        <div></div>
+                    </div>
+
+
+                    <div class="input-form" id="">
+                        <div class="selection-grid">
+                            <label for="numShots">Number of shots you want to simulate:</label>
+                            <select name="numShots" id="numShots" class="selection-shots">
+                                <option value="1">1</option>
+                                <option value="10">10</option>
+                                <option value="100">100</option>
+                                <option value="1000" selected>1000</option>
+                                <option value="10000">10000</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Right hand:
+                            </label>
+                            <input class="form-check-input" type="radio" value="0" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
+
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Left hand:
+                            </label>
+                            <input class="form-check-input" type="radio" value="1" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                        </div>
+
+                    </div>
+
+                    <div class="subm-btn-div">
+                        <button id="tester" class="subm-btn">Submit</button>
+                        <button id="reset-btn" class="reset-btn">Reset</button>
+                        <div id="load-text"></div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container footer-grid footer-grid--3-cols">
+            <div class="logo-col">
+                <h4 class="footer-subheader">You can follow me in the links below:</h4>
+                <ul class="social-links">
+                    <li><a class="footer-link" href="/githubprofile">
+                            <ion-icon name="logo-github" class="social-icon"></ion-icon>
+                        </a></li>
+                    <li>
+                        <a class="footer-link" href="/inprofile">
+                            <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-programs">
+                <h4 class="footer-subheader">Cool programs I've been working on:</h4>
+                <ul>
+                    <li>
+                        <a href="">
+                            <p>Golfsimulation Program</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p> Affine transformation from "scratch" (for fun)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>Question and answer NLP program</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </footer>
+
+    <script defer src="../js/style.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../js/simulation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

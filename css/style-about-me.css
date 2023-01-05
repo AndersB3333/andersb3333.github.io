@@ -1,0 +1,401 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+b {
+    font-weight: 400;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #030e17;
+    Overflow-x: hidden;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*****************/
+/* HEADER */
+/*****************/
+.nav {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    padding: 2rem 2rem;
+}
+
+.nav>.nav-header>.nav-title h3 {
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    padding-top: 0.7rem;
+    display: inline;
+    float: right;
+    font-size: 1.4rem;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #030e17;
+    transition: color 700ms, font-weight 700ms ease;
+}
+
+.nav>.nav-links>a:hover {
+    color: #0096c7;
+    font-weight: 600;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+.sticky {
+    box-shadow: 0px 1px 10px #999;
+}
+
+.logo {
+    font-weight: 700;
+    color: black;
+    font-size: 1.8rem;
+}
+
+#resume-focus {
+    padding: .4rem 0.6rem;
+    transition: background-color 700ms ease,
+        color 700ms ease, transform 700ms ease;
+    border: solid;
+    border-radius: 50px;
+    color: #0096c7;
+}
+
+#resume-focus:hover {
+    color: white;
+    background-color: #457b9d;
+    transform: scale(5);
+}
+
+
+/*****************/
+/* ABOUT-ME-BANNER */
+/*****************/
+
+.about-banner {
+    width: 100%;
+    padding: 8rem 8rem;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #0096c7 74%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    place-items: center;
+    row-gap: 4rem;
+}
+
+.about-banner-headline-div {
+    grid-row: 1;
+    color: #e9ecef;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.about-banner-subheader-div {
+    font-size: 1.4rem;
+    color: #e9ecef;
+    place-self: center;
+    align-self: stretch;
+}
+
+.about-me-arrow {
+    margin: 0 1rem;
+    font-stretch: 500%;
+}
+
+
+/*****************/
+/* PERSONAL-DETAILS-SECTION */
+/*****************/
+
+
+.personal-details-section {
+    max-width: 130rem;
+    margin: 4rem 0 auto;
+    padding: 0 5rem;
+    display: grid;
+    gap: 9.6rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+}
+
+.personal-details-img-div {
+    grid-column: 1;
+}
+
+.personal-details-headline-div {
+    align-self: center;
+    grid-column: 2;
+}
+
+.about-me-img {
+    width: 100%;
+}
+
+.about-me-btn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    color: #e9ecef;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(72deg, #1fd1f9 0%, #0096c7 74%);
+    transition: box-shadow 300ms;
+}
+
+.about-me-btn:hover {
+    box-shadow: 0px 20px 20px #ade8f4;
+}
+
+.personal-details-headline {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.personal-details-subheadline {
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: #6c757d;
+    font-weight: 300;
+}
+
+.personal-details-paragraph {
+    font-size: 1.4rem;
+    color: #6c757d;
+    grid-column: 1 / span 2;
+    font-weight: 300;
+    line-height: 2rem;
+
+}
+
+.line-breaker {
+    grid-column: 1/ span 2;
+    color: #6c757d;
+    opacity: 0.2;
+}
+
+/*****************/
+/* MY-EXPERIENCE-SECTION */
+/*****************/
+
+.headline {
+    text-align: center;
+    margin: 8rem 0rem;
+    font-size: 3.2rem;
+}
+
+.timeline ul li {
+    background: #f9f9ff;
+    position: relative;
+    margin: 0 auto;
+    width: 2px;
+    padding-bottom: 40px;
+}
+
+.timeline ul li:last-child {
+    padding-bottom: 7px;
+}
+
+.timeline ul li:before {
+    content: '';
+    background: #1fd1f9;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    width: 1rem;
+    height: 1rem;
+    border: 0.3rem solid #eee;
+    border-radius: 100%;
+}
+
+.timeline ul li .hidden {
+    opacity: 0;
+}
+
+.timeline ul li .content {
+    background-color: white !important;
+    box-shadow: 0px 10px 25px 3px rgba(204, 204, 204, 0.3);
+    position: relative;
+    top: 7px;
+    width: 360px;
+    padding: 30px;
+}
+
+.timeline ul li .content h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.timeline ul li .content p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.timeline ul li .content p b {
+    color: #012a4a;
+    font-weight: 500;
+}
+
+.timeline ul li:nth-child(odd) .content {
+    left: 50px;
+}
+
+.timeline ul li:nth-child(odd) .content:before {
+    left: -38px;
+}
+
+.timeline ul li:nth-child(even) .content {
+    left: calc(-360px - 45px);
+}
+
+.timeline ul li:nth-child(even) .content:before {
+    right: -38px;
+}
+
+.card-date {
+    color: #6c757d;
+}
+
+/*****************/
+/* FOOTER-SECTION */
+/*****************/
+
+.footer {
+    margin-top: 9.6rem;
+    padding: 6rem 0;
+    border-top: 2px solid #0077b6;
+    background-color: #2b2d42;
+}
+
+.grid-footer {
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link {
+    transition: color 700ms ease !important;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #f7ede2;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: #48cae4;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    margin-top: 1rem;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+.social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.footer-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    row-gap: 9.6rem;
+    column-gap: 6.4rem;
+}
+
+.footer-grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-programs ul {
+    line-height: .8rem;
+}
+
+.footer-subheader {
+    display: flex;
+    justify-content: center;
+    color: #edf2f4;
+}
+
+.footer-programs a {
+    color: white;
+    padding-left: 0.5rem;
+
+}
