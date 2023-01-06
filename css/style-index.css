@@ -189,8 +189,8 @@ ul {
 }
 
 .home-about-header {
-    font-size: 3.4rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 500;
     margin-bottom: 2rem;
 }
 
@@ -209,6 +209,12 @@ ul {
     font-size: 1.8rem;
     background-color: #00b4d8;
     padding: .6rem 1.5rem;
+    transition: box-shadow 300ms;
+
+}
+
+.about-me-btn:hover {
+    box-shadow: 0px 10px 10px #ade8f4;
 }
 
 /*****************/
@@ -333,13 +339,139 @@ ul {
 
 
 
+/*****************/
+/* LATEST-PROJECTS */
+/*****************/
+
+.grid-3cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    column-gap: 2rem;
+    padding: 0rem 10rem;
+}
+
+.header-text {
+    grid-column: 1 / span 3;
+}
+
+.col-md-8>h1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.col-md-8>p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.section-gap {
+    padding-top: 80px;
+}
+
+.recent-blog-area {
+    background: #f9f9ff;
+}
+
+.recent-blog-area h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.recent-blog-area p {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.single-recent-blog .thumb {
+    overflow: hidden;
+}
+
+.single-recent-blog .thumb img {
+    max-width: 100%;
+    max-height: 200px;
+    top: 50%;
+    left: 50%;
+}
+
+
+.single-recent-blog h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 35px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.single-recent-blog a {
+    color: #222;
+}
+
+.single-recent-blog .name {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.single-recent-blog p {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.single-recent-blog .bottom {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.single-recent-blog .bottom span {
+    margin-left: 10px;
+}
+
+.single-recent-blog .f-img {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.single-recent-blog:hover {
+    cursor: pointer;
+}
+
+.single-recent-blog:hover h4 {
+    color: #0096c7;
+}
+
+.single-recent-blog:hover .f-img {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+f-img {
+    width: 200px;
+    height: 150px !important;
+    overflow: hidden;
+}
+
+
 
 /*****************/
 /* FOOTER-SECTION */
 /*****************/
 
 .footer {
-    margin-top: 9.6rem;
+
     padding: 6rem 0;
     border-top: 2px solid #0077b6;
     background-color: #2b2d42;
