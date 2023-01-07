@@ -14,7 +14,7 @@ function myFunction() {
     } else {
         navbar.classList.remove("sticky");
     }
-}
+};
 
 
 window.onscroll = function () {
@@ -28,9 +28,12 @@ allLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
         e.preventDefault();
         const href = link.getAttribute('href')
+        if (href.startsWith("http")) {
+            window.location = this.href
+        };
         if (href.startsWith("/")) {
             window.location = this.href
-        }
+        };
         if (href === "#") window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -39,9 +42,6 @@ allLinks.forEach(function (link) {
         if (href !== "#" && href.startsWith("#")) {
             const sectionEl = document.querySelector(href)
             sectionEl.scrollIntoView({ behavior: "smooth" })
-        }
-
-        if (link.classList.contains("main-nav-link"))
-            headerEl.classList.toggle("nav-open")
+        };
     })
-})
+});

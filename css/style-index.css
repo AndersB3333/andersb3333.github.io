@@ -557,5 +557,12 @@ f-img {
 .footer-programs a {
     color: white;
     padding-left: 0.5rem;
+}
 
+.footer-programs p {
+    transition: color 700ms ease;
+}
+
+.footer-programs p:hover {
+    color: #00b4d8;
 }
