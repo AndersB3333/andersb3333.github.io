@@ -111,7 +111,7 @@ ul {
 #resume-focus:hover {
     color: white;
     background-color: #457b9d;
-    transform: scale(5);
+    transform: scale(1.1);
 }
 
 
@@ -143,6 +143,11 @@ ul {
     color: #e9ecef;
     place-self: center;
     align-self: stretch;
+}
+
+.about-banner-subheader-div a {
+    color: #e9ecef;
+    font-weight: 400;
 }
 
 .about-me-arrow {

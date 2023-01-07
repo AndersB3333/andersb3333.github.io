@@ -144,6 +144,10 @@ ul {
     align-self: stretch;
 }
 
+.about-banner-subheader a {
+    color: #e9ecef;
+}
+
 .about-me-arrow {
     margin: 0 1rem;
     font-stretch: 500%;
