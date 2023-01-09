@@ -176,6 +176,12 @@
     }
 }
 
+@media (max-width: 400px) {
+    .hero-text-box h2 {
+        margin-top: 4rem;
+    }
+}
+
 @media (max-width:380px) {
     .hero-img {
         margin-top: 2rem;
