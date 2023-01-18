@@ -173,6 +173,7 @@ ul {
     grid-template-columns: .5fr 2fr;
     align-items: flex-start;
     padding: 0 14rem;
+    color: black;
 }
 
 .portfolio-img-div {

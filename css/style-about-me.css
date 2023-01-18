@@ -110,7 +110,7 @@ ul {
 #resume-focus:hover {
     color: white;
     background-color: #457b9d;
-    transform: scale(5);
+    transform: scale(1.05);
 }
 
 
