@@ -203,7 +203,7 @@ ul {
     transition: 700ms ease;
 }
 
-.portfolio-div h2:hover {
+.portfolio-div:hover h2 {
     color: #0096c7;
 }
 
