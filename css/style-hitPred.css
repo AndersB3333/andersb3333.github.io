@@ -1,0 +1,156 @@
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: whitesmoke;
+    display: grid;
+}
+
+#head {
+    margin: 0rem 0rem 2.4rem 0rem;
+}
+
+.headline {
+    font-size: 2.6rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+
+.nav {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    padding: 2rem 2rem;
+}
+
+.nav>.nav-header>.nav-title h3 {
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    padding-top: 0.7rem;
+    display: inline;
+    float: right;
+    font-size: 1.4rem;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #030e17;
+    transition: color 700ms, font-weight 700ms ease;
+}
+
+.nav>.nav-links>a:hover {
+    color: #0096c7;
+    font-weight: 600;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+
+/* ************* */
+/*  SIM SECTION */
+/* ************* */
+.form-card {
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    max-width: 750px;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+    border-radius: 11px;
+    margin: 4.8rem;
+    padding: 4.8rem 4.8rem;
+}
+
+#input-data-toggle{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#result-data{
+    grid-row:1/4;
+    grid-column: 2/2;
+    font-size: 2.4rem;
+    justify-self: center;
+    align-self: center;
+}
+
+form input[type="number"]{
+    margin: 5px;
+}
+
+form label{
+    font-size: 1.4rem;
+    color: grey;
+}
+
+.input-data{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.input-data div{
+row-gap: 20px;
+}
+
+#submit{
+    font-size: 1.6rem;
+    margin-right: 15px;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    color: #e9ecef;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(72deg, #1fd1f9 0%, #0096c7 74%);
+    transition: box-shadow 300ms;
+}
+
+#submit:hover{
+        box-shadow: 0px 20px 20px #ade8f4;
+}
+
+form #submit[disabled]{
+    pointer-events: none;
+    background-color: #a9adae;
+    opacity: 0.6;
+}
+
+#reset-btn{
+    margin-top: 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    color: #000;
+    background-color: #b7c3c6;
+    background-image: linear-gradient(140deg, #646768 0%, #a1a7a9 74%);
+    transition: box-shadow 300ms;
+}
+
+#reset-btn:hover{
+    box-shadow: 0px 20px 20px #a9adae;
+}
+
+.highlight{
+    color: #000;
+    font-weight: 700;
+}

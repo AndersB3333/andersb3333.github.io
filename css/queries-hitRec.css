@@ -1,0 +1,11 @@
+@media (max-width: 800px) {
+    #result-para {
+        font-size: 1.4rem;
+        row-gap: 20px;
+    }
+    #result-para li {
+        margin-bottom: 10px;
+    }
+
+}
+

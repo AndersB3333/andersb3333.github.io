@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style-index.css">
+    <link rel="stylesheet" href="../css/style-hitPred.css">
+    <link rel="stylesheet" href="../css/queries-about-me.css">
+</head>
+<body>
+  <link rel="stylesheet" href="../css/style-about-me.css">
+  <div class="nav" id="navbar">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+            <a href="/" class="logo">
+                <h3> A. Baumann</h3>
+            </a>
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="about_me.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="../anders_baumann_resume_eng_version.pdf" target="_blank" id="resume-focus">Resume</a>
+    </div>
+</div>
+
+<div style="background-color: #154408; background-image: linear-gradient(72deg, #096f12 0%, #141d11 74%); color: #fff; padding: 10px; text-align: center;">
+  <h1 style="margin: 0;">Spotify API Project</h1>
+  <a href="hitPredict.html" style="color: #fff; text-decoration: none; margin: 10px;">Hit Prediction</a>
+  <a href="songRec.html" style="color: #fff; text-decoration: none; margin: 10px;">Song Recommender</a>
+</div>
+
+  <div class="container">
+
+    
+    <div class="form-card">
+      <h1 class="headline">Predicting Hit Song Demo:</h1>
+      <div class="input-data">
+        <div id="result-data">
+
+        </div>
+    <form id="song-form" action="" method="POST">
+      <div>
+        <label for="song-name">Select a song:</label>
+        <select id="song-name" name="song-name">
+        <option value="">Select a Song</option>
+          <option value="rick-astley">Never Gonna Give you up -- Rick Astley</option>
+          <option value="requiem-d-minor">Requiem D Minor -- Wolfgang Mozart</option>
+          <option value="shape-of-you">Shape of You -- Ed Sheeran</option>
+          <option value="as-it-was">As it Was -- Harry Styles</option>
+          <option value="about-damn-time">About Damn Time -- Lizzo</option>
+          <option value="i-aint-worried">I Ain't Worried -- OneRepublic</option>
+          <option value="dreams">Dreams -- Fleetwood Mac</option>
+          <option value="call-on-me">Call on Me -- Bebe Rexha</option>
+          <option value="call-me-maybe">Call Me Maybe -- Carly Rae Jepsen</option>
+          <option value="own">Input own song</option>
+        </select>
+      </div>
+      <div>
+        <label for="song-name-input">Song Name:</label>
+        <input type="text" id="song-name-input" name="song-name-input" required>
+      </div>
+      <div>
+        <label for="explicit">Explicit:</label>
+        <input type="number" max=1 min=0 id="explicit" name="explicit" required>
+      </div>
+      <div>
+        <label for="danceability">Danceability:</label>
+        <input type="number" max=1 min=0 step=0.01 id="danceability" name="danceability" required>
+      </div>
+      <div>
+        <label for="energy">Energy:</label>
+        <input type="number" max=1 min=0 step=0.01 id="energy" name="energy" required>
+      </div>
+      <div>
+        <label for="key">Key:</label>
+        <input type="number" min=0 id="key" name="key" required>
+      </div>
+      <div>
+        <label for="loudness">Loudness:</label>
+        <input type="number" step=0.01 id="loudness" name="loudness" required>
+      </div>
+      <div>
+        <label for="mode">Mode:</label>
+        <input type="number" max=1 min=0 id="mode" name="mode" required>
+      </div>
+
+      <div>
+        <label for="speechiness">Speechiness:</label>
+        <input type="number" max=1 min=0 step=0.01 id="speechiness" name="speechiness" required>
+      </div>
+
+      <div>
+        <label for="acousticness">Acousticness:</label>
+        <input type="number" max=1 min=0 step=0.01 id="acousticness" name="acousticness" required>
+      </div>
+
+      <div>
+        <label for="instrumentalness">Instrumentalness:</label>
+        <input type="number" max=1 min=0 step=0.01 id="instrumentalness" name="instrumentalness" required>
+      </div>
+      <div>
+        <label for="liveness">Liveness:</label>
+        <input type="number" max=1 min=0 step=0.01 id="liveness" name="liveness" required>
+      </div>
+      <div>
+        <label for="valence">Valence:</label>
+        <input type="number" max=1 min=0 step=0.01 id="valence" name="valence" required>
+      </div>
+      <div>
+        <label for="tempo">Tempo:</label>
+        <input type="number" step=0.01 id="tempo" name="tempo" required>
+      </div>
+      <div>
+        <label for="time_signature">Time Signature:</label>
+        <input type="number" id="time_signature" name="time_signature" required>
+      </div>
+      <div>
+        <label for="duration_seconds">Duration in Seconds:</label>
+        <input type="number" max=1000 min=0 step=0.01 id="duration_seconds" name="duration_seconds" required>
+      </div>
+
+        <input type="submit" value="Predict" id="submit">
+        <input type="button" value="Reset" id="reset-btn" onclick="resetForm()">
+        <div id="load-text"></div>
+      </form>
+    </div>
+  
+
+    </div>
+        
+  </div>
+
+<div id="song-features"></div>
+
+<footer class="footer">
+  <div class="footer-container footer-grid footer-grid--3-cols">
+      <div class="logo-col">
+          <h4 class="footer-subheader">You can follow me in the links below:</h4>
+          <ul class="social-links">
+              <li><a class="footer-link" href="/githubprofile">
+                      <ion-icon name="logo-github" class="social-icon"></ion-icon>
+                  </a></li>
+              <li>
+                  <a class="footer-link" href="/inprofile">
+                      <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-programs">
+          <h4 class="footer-subheader">Cool programs I've been working on:</h4>
+          <ul>
+              <li>
+                  <a href="">
+                      <p>Golfsimulation Program</p>
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <p> Affine transformation from "scratch" (for fun)</p>
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <p>Question and answer NLP program</p>
+                  </a>
+              </li>
+          </ul>
+      </div>
+</footer>
+
+    
+    <script src="../js/hitPredict.js"></script>
+    <script src="../js/style.js"></script>    
+</body>
+</html>
